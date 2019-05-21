@@ -1,0 +1,25 @@
+<ng-container *ngIf="loading">
+    <div fxLayout="column" fxFill fxLayoutAlign="center center" class="loader-div">
+      <mat-spinner></mat-spinner>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!loading">
+    <div fxLayout="row" fxLayoutAlign="start center" class="user-details-section">
+      <div fxFlex="10%"></div>
+      <div fxFlex="80%" fxLayout="row" fxLayoutAlign="start center">
+        <div class="user-details-section-container">
+          <a (click)="goToBackPage()" class="back-btn">
+            <mat-icon>keyboard_backspace</mat-icon>
+            <span>BACK</span>
+          </a>
+          <div class="meta-container">
+              <img [src]="userDetails?.avatar" alt="no-image">
+              <p>First Name: {{userDetails?.first_name}}</p>
+              <p>Last Name: {{userDetails?.last_name}}</p>
+              <p>Email : {{userDetails?.email}}</p>
+          </div>
+        </div>
+      </div>
+      <div fxFlex="10%" fxHide.xs></div>
+    </div>
+  </ng-container>

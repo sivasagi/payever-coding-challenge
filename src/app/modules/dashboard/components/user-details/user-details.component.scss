@@ -1,0 +1,39 @@
+@import "../../../../../assets/stylesheet/variables";
+.loader-div {
+    height: 100vh !important;
+    padding: 5rem;
+}
+.user-details-section {
+    margin-top: 100px;
+    color: $secondary-color;
+    .user-details-section-container {
+        position: relative;
+        padding: 1rem;
+        width: 100%;
+        .meta-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .back-btn{
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            margin: 0.5rem;
+            padding: 0.2rem;
+            mat-icon {
+                font-size: 18px;
+                height: 18px;
+                width: 24px;
+            }
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+}
